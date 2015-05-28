@@ -32,7 +32,6 @@ WORKDIR /home/redmine/redmine
 RUN git clone git://github.com/makotokw/redmine-theme-gitmike.git /home/redmine/redmine/public/themes/gitmike
 RUN git clone https://github.com/sciyoshi/redmine-slack.git /home/redmine/redmine/plugins/redmine_slack
 RUN bundle install
-RUN bundle exec rake redmine:plugins:migrate RAILS_ENV=production
 
 EXPOSE 80
 EXPOSE 443
